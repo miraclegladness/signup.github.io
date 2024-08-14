@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="dash.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div id="dashboard">
+        <!-- Login Form -->
+        <div id="login-form-container">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" name="email" autocomplete="email" required>
+                
+                <label for="login-password">Password:</label>
+                <div class="password-container">
+                    <input type="password" id="login-password" name="password" autocomplete="current-password" required>
+                    <button type="button" class="toggle-password" data-target="#login-password">
+                        <span class="eye-icon">👁️</span>
+                    </button>
+                </div>
+                
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+            </form>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="signup-form-container" class="hidden">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <label for="signup-name">Name:</label>
+                <input type="text" id="signup-name" name="name" autocomplete="name" required>
+                
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" name="email" autocomplete="email" required>
+                
+                <label for="signup-contact">Contact:</label>
+                <input type="text" id="signup-contact" name="contact" autocomplete="tel" required>
+                
+                <label for="signup-password">Password:</label>
+               <div class="password-container">
+                    <input type="password" id="signup-password" name="password" autocomplete="new-password" required>
+                    <button type="button" class="toggle-password" data-target="#signup-password">
+                        <span class="eye-icon">👁️</span>
+                    </button>
+                </div>
+                
+                <button type="submit">Sign Up</button>
+                <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+            </form>
+        </div>
+        <div id="reset-password-section">
+            <h3>Reset Password</h3>
+            <form id="reset-password-form">
+                <label for="reset-email">Email:</label>
+                <input type="email" id="reset-email" name="email" required>
+                
+                <label for="reset-new-password">New Password:</label>
+                <input type="password" id="reset-new-password" name="newPassword" required>
+                
+                <button type="submit">Reset Password</button>
+            </form>
+        </div>
+<script src="dashboard.js"></script>
+</body>
+</html>
+
+
